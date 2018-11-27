@@ -24,8 +24,6 @@ class App < Sinatra::Base
         @team.heroes << hero
 
       end
-      @team
-
       erb :show
     end
 
