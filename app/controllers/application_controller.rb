@@ -14,7 +14,7 @@ class App < Sinatra::Base
       binding.pry
 
       #iterates over the heroes hash
-      params[:team][:heroes].each_with_index do |hero_data, index|
+      params[:team][:heroes][0].each_with_index do |hero_data, index|
         hero = Hero.new
         index += 1
         # binding.pry
