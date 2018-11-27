@@ -15,6 +15,7 @@ class App < Sinatra::Base
 
       #iterates over the params hash (member1, member2, member3)
       params[:team][:heroes].each_with_index do |member, index|
+        binding.pry
         ("hero"+"#{index + 1}").to_var = Hero.new
         index += 1
         hero.name = member["member#{index}"]["member#{index}_name"]
