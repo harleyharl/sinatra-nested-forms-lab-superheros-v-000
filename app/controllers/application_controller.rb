@@ -16,7 +16,7 @@ class App < Sinatra::Base
       params[:team][:heroes].each do |member|
         binding.pry
         hero = Hero.new
-        index = 1
+        index += 1
         hero.name = member["member#{index}"]["member#{index}_name"]
         # puts member["member#{index}"]["member#{index}_name"]
         hero.power = member["member#{index}"]["member#{index}_power"]
@@ -24,7 +24,7 @@ class App < Sinatra::Base
         hero.bio = member["member#{index}"]["member#{index}_bio"]
         # puts member["member#{index}"]["member#{index}_bio"]
         @team.heroes << hero
-        index += 1
+        # index += 1
 
       end
 
