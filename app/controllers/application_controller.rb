@@ -20,6 +20,7 @@ class App < Sinatra::Base
         hero.power = hero_data["member#{index}_power".to_sym]
         hero.bio = hero_data["member#{index}_bio".to_sym]
         @team.heroes << hero
+        binding.pry
         # binding.pry
         # binding.pry
       end
