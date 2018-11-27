@@ -15,9 +15,9 @@ class App < Sinatra::Base
       #iterates over the params hash (member1, member2, member3)
       index = 0
       params[:team][:heroes].each do |member|
-        binding.pry
+        # binding.pry
         hero = Hero.new
-        
+
         hero.name = member["name"]
         hero.power = member["power"]
         hero.bio = member["bio"]
