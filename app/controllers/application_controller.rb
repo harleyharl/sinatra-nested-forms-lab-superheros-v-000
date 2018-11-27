@@ -23,7 +23,7 @@ class App < Sinatra::Base
         @team.heroes << hero
 
       end
-
+      binding.pry
       erb :show
     end
 
