@@ -20,7 +20,7 @@ class App < Sinatra::Base
         hero.name = member["member#{index}"]["member#{index}_name"]
         hero.power = member["member#{index}"]["member#{index}_power"]
         hero.bio = member["member#{index}"]["member#{index}_bio"]
-        # @team.heroes << hero
+        @team.heroes << hero
 
       end
 
