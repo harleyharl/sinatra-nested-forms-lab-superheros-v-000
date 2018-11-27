@@ -17,7 +17,7 @@ class App < Sinatra::Base
       params[:team][:heroes].each_with_index do |hero_data, index|
         hero = Hero.new
         index += 1
-        # binding.pry
+        binding.pry
         hero.name = hero_data["member#{index}_name".to_sym]
         hero.power = hero_data["member#{index}_power".to_sym]
         hero.bio = hero_data["member#{index}_bio".to_sym]
