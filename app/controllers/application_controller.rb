@@ -18,9 +18,9 @@ class App < Sinatra::Base
         hero = Hero.new
         index += 1
         binding.pry
-        hero.name = hero_data["member#{index}_name".to_sym]
-        hero.power = hero_data["member#{index}_power".to_sym]
-        hero.bio = hero_data["member#{index}_bio".to_sym]
+        hero.name = hero_data["member#{index}".to_sym]["member#{index}_name".to_sym]
+        hero.power = hero_data["member#{index}".to_sym]["member#{index}_power".to_sym]
+        hero.bio = hero_data["member#{index}".to_sym]["member#{index}_bio".to_sym]
         @team.heroes << hero
         # binding.pry
         # binding.pry
