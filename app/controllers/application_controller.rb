@@ -22,7 +22,7 @@ class App < Sinatra::Base
         hero.power = member["member#{index}"]["member#{index}_power"]
         hero.bio = member["member#{index}"]["member#{index}_bio"]
         @team.heroes << hero
-
+        @team
       end
 
       erb :show
