@@ -14,14 +14,14 @@ class App < Sinatra::Base
       binding.pry
 
       #iterates over the heroes hash
-      params[:team][:heroes][0].each_with_index do |hero_data, index|
+      params[:team][:heroes][0].each_with_index do |member, index|
         hero = Hero.new
         index += 1
         # binding.pry
-        hero.name = hero_data["member#{index}".to_sym]["member#{index}_name".to_sym]
-        hero.power = hero_data["member#{index}".to_sym]["member#{index}_power".to_sym]
-        hero.bio = hero_data["member#{index}".to_sym]["member#{index}_bio".to_sym]
-        @team.heroes << hero
+        member.name = hero_data["member#{index}".to_sym]["member#{index}_name".to_sym]
+        member.power = hero_data["member#{index}".to_sym]["member#{index}_power".to_sym]
+        member.bio = hero_data["member#{index}".to_sym]["member#{index}_bio".to_sym]
+        @team.heroes << member
         # binding.pry
         # binding.pry
         # binding.pry
