@@ -12,6 +12,8 @@ class App < Sinatra::Base
 
       @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
       # binding.pry
+
+      #iterates over the heroes hash
       params[:team][:heroes].each_with_index do |hero_data, index|
         hero = Hero.new
         index += 1
@@ -20,7 +22,7 @@ class App < Sinatra::Base
         hero.power = hero_data["member#{index}_power".to_sym]
         hero.bio = hero_data["member#{index}_bio".to_sym]
         @team.heroes << hero
-        binding.pry
+        # binding.pry
         # binding.pry
         # binding.pry
       end
