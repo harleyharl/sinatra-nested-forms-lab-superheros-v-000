@@ -23,7 +23,6 @@ class App < Sinatra::Base
         hero.bio = member["bio"]
 
         @team.heroes << hero
-        # index += 1
 
       end
 
