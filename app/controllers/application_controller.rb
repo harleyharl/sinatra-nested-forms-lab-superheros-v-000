@@ -14,15 +14,15 @@ class App < Sinatra::Base
 
       #iterates over the params hash (member1, member2, member3)
       params[:team][:heroes].each_with_index do |member, index|
-
+        binding.pry
         hero = Hero.new
         index += 1
         hero.name = member["member#{index}"]["member#{index}_name"]
-        puts member["member#{index}"]["member#{index}_name"]
+        # puts member["member#{index}"]["member#{index}_name"]
         hero.power = member["member#{index}"]["member#{index}_power"]
-        puts member["member#{index}"]["member#{index}_power"]
+        # puts member["member#{index}"]["member#{index}_power"]
         hero.bio = member["member#{index}"]["member#{index}_bio"]
-        puts member["member#{index}"]["member#{index}_bio"]
+        # puts member["member#{index}"]["member#{index}_bio"]
         @team.heroes << hero
 
       end
