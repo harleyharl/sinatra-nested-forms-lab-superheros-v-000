@@ -11,11 +11,9 @@ class App < Sinatra::Base
     post '/teams' do
 
       @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
-      # binding.pry
 
       #iterates over the params hash (member1, member2, member3)
       params[:team][:heroes].each_with_index do |member, index|
-        # binding.pry
         hero = Hero.new
         index += 1
         hero.name = member["member#{index}"]["member#{index}_name"]
@@ -24,7 +22,7 @@ class App < Sinatra::Base
         @team.heroes << hero
 
       end
-      binding.pry
+
       erb :show
     end
 
